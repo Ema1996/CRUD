@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" / >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST" action="/update" enctype="multipart/form-data">
+        <input hidden type="text" value="{{item[0]}}" name="txtId" id="txtId" />
+        <label for="txtNombre">Name:</label>
+        <input
+          type="text"
+          name="txtNombre"
+          id="txtNombre"
+          value="{{item[2]}}"
+        />
+        <br />
+        <label for="txtDescription">Description:</label>
+        <input
+          type="text"
+          name="txtDescription"
+          id="txtDescription"
+          value="{{item[3]}}"
+        />
+        <br />
+        <label for="txtStock">Stock:</label>
+        <input
+          type="number"
+          name="txtStock"
+          id="txtStock"
+          value="{{item[4]}}"
+        />
+        <br />
+        Image: {{item[1]}}
+        <label for="txtFoto">Image:</label>
+        <input type="file" name="txtFoto" id="txtFoto" />
+        <br />
+        <input type="submit" value="Modify" />
+      </form>
+    </div>
+  </body>
+</html>
